@@ -1,2 +1,3 @@
 ## second homework of data mining
-### write by python and matlab
+### author: aoquan
+### Environment: ubuntu14.04 + python + Rstudio

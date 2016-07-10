@@ -23,16 +23,6 @@ summary(rules)
 inspect(rules)
 
 
-# #筛选右变元为幸存的规则子集
-# x=subset(rules,subset=rhs%in%"Survive")     
-# x
-# inspect(x)
-# 
-# #筛选右变元为死亡的规则子集
-# x=subset(rules,subset=rhs%in%"Dead")
-# x
-# inspect(x)
-
 #根据支持度对求得的关联规则子集排序并察看
 inspect(sort(rules,by="support")[1:10])  
 #根据置信度对求得的关联规则子集排序并察看
@@ -43,10 +33,10 @@ inspect(sort(rules,by="lift")[1:10])
 itemFrequencyPlot(tr,support = 0.3,cex.names =0.8) 
 
 
-#plot(rules)
+plot(rules)
 
-#plot(rules, measure = c("support", "lift"), shading = "confidence")
+plot(rules, measure = c("support", "lift"), shading = "confidence")
 #画泡泡图
-#plot(rules, method = "grouped")
+plot(rules, method = "grouped")
 #画平行坐标图
 plot(rules, method="paracoord", control=list(reorder=TRUE))
